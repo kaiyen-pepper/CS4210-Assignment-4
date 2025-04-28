@@ -68,7 +68,7 @@ model = models.Sequential([
 ])
 
 # Compiling the model using optimizer = sgd, loss = sparse_categorical_crossentropy, and metric = accuracy
-model.compile(optimizer= keras.optimizers.sgd(), loss= 'sparse_categorical_crossentropy', metrics=[keras.metrics.Accuracy()])
+model.compile(optimizer= 'sgd', loss= 'sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # Fitting the model with batch_size=32 and epochs=10
 model.fit(X_train, Y_train, batch_size= 32, epochs= 10, validation_data=(X_test, Y_test))
